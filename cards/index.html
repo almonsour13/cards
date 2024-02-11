@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body{
+            background-color:rgb(35, 35, 35);
+        }
+        .yellow{
+            color: rgb(248, 244, 0);
+        }
+        .bg-trasnparent{
+            background-color: transparent;
+        }
+        .border-yellow{
+            border-color: rgb(248, 244, 0);
+        }
+        .card{
+            background-color: transparent;
+            border-color: transparent;
+        }
+        .card:hover{
+            border-color: rgb(248, 244, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="container-fluid">
+            <div class="container h-50 p-0 pt-2 pb-2">
+                <h5 class="yellow">MS</h2>
+            </div>
+        </div>
+        <div class="container p-0">
+            <div class="container-fluid p-0">
+                <p class="header-title h2 yellow mt-4">
+                    Products
+                </p>
+            </div>
+            <div class="row mt-1">
+              <!-- Repeat this card structure for more movies -->
+            </div>
+        </div>
+    </div>
+    <script>
+        // Assuming you want to append the cards to each element with the class "row"
+        var rows = document.getElementsByClassName("row");
+        for (let i = 0; i < rows.length; i++) {
+            for (let a = 0; a < 5; a++) {
+                rows[i].innerHTML += `
+                <div class="col-6 col-sm-4 col-md-4 col-lg-3 mt-4 bg-none">
+                    <div class="card p-1 rounded-0 border-2">
+                        <img src="product1.png" class="card-img-top img-fluid h-75 rounded-0" alt="Movie Image">
+                        <div class="card-body p-0 pt-1 pb-1">
+                            <h5 class="card-title yellow">Movie Title</h5>
+                            <div class="col">
+                                <a href="#" class="btn p-1 pe-3 px-3 bg-trasnparent border-2 border-yellow yellow rounded-0">View</a>
+                                <a href="#" class="btn p-1 pe-3 px-3 bg-trasnparent border-2 border-yellow yellow rounded-0">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+                `;
+            }
+        }
+    </script>
+    
+    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
